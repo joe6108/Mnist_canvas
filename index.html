@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--適應各遊覽器-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--自動適應裝置介面大小-->
     <title>MNIST Canvas Minimal</title>
 
     <link rel="stylesheet" href="style.css">
@@ -12,12 +14,38 @@
 </head>
 
 <body>
-    <canvas style="width: 28px; height: 28px; background-color: white; display: none;" id="hiddenCanvas" width="28"
-        height="28"></canvas>
-    <canvas id="canvas" width="280" height="280"></canvas>
+    <div id="block1">
+            <div class="math_format">
+                <div class="math">
 
+                </div>
+                <div class="strip">
+                    
+                </div>
+            </div>
+            <div class="math_format"></div>
+            <div class="math_format"></div>
+            <div class="math_format"></div>
+            <div class="math_format"></div>
+    </div>
+    <div id="block2">
+        <div class="name"></div>
+        <div class="img"></div>
+        <div class="reset"></div>
+    </div>
+    <div id="block3">
+            <div class="math_format"></div>
+            <div class="math_format"></div>
+            <div class="math_format"></div>
+            <div class="math_format"></div>
+            <div class="math_format"></div>
+    </div>
+    <!--畫板-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--支援jquery to html-->
     <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.min.js"></script>
+    <!--onnx機器學習用的模型-->
+    
 </body>
 
 </html>

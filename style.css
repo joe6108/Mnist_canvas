@@ -1,19 +1,67 @@
 html,
 body {
-    height: 100%;
-}
-
-body {
-    position: relative;
-    background: #EEEEEE;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+ 
 }
 
 #canvas {
     width: 280px;
     height: 280px;
     background-color: white;
+}
+
+#block1 {
+    background-color: salmon;
+    height: 600px;
+    text-align: center;
+    float: left;
+    width: 10%;
+    
+}
+#block2 {
+    background-color: rgb(114, 214, 250);
+    height: 600px;
+    text-align: center;
+    width: 80%;
+    float: left;
+    
+}
+#block3 {
+    background-color: rgb(114, 250, 132);
+    height: 600px;
+    text-align: center;
+    float: right;
+    width: 10%;
+}
+
+.math_format{
+    background-color: aliceblue;
+    height: 100px;
+    width: 90px;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-right: auto;
+}
+.name{
+    background-color: rgb(11, 50, 245);
+    height: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.img{
+    background-color: rgb(185, 35, 35);
+    height: 400px;
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+.reset{
+    background-color: rgb(2, 2, 2);
+    height: 70px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
 }
