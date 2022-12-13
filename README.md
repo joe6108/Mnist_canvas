@@ -9,6 +9,6 @@
 1. terminal enter `npx serve`
 
 ## 進度
-1.0 -> 基底
-2.0 -> HTML完成
-3.0 -> 引入onnx模型
+- 1.0 -> 基底
+- 2.0 -> HTML完成
+- 3.0 -> 引入onnx模型
