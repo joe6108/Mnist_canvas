@@ -9,64 +9,62 @@
     <!--自動適應裝置介面大小-->
     <title>MNIST Canvas Minimal</title>
 
-    <!-- Bootstrap 5 -->
-
-
 
     <link rel="stylesheet" href="views/style.css">
     <script defer src="views/main.js"></script>
 </head>
 
 <body>
-    <div id="block1">
+    <div id="block_null"></div>
+    <div id="block1">   
             <div class="math_format">
                 <div class="math">
                     <b id="num-0">0</b>
                 </div>
-                <div class="strip" id="bar-0">
-                    
+                <div class="strip">
+                    <div class="bar" id="bar-0"></div>
                 </div>
             </div>
             <div class="math_format">
                 <div class="math">
                     <b id="num-1">1</b>
                 </div>
-                <div class="strip" id="bar-1">
-                    
+                <div class="strip">
+                    <div class="bar" id="bar-1"></div>
                 </div>
             </div>
             <div class="math_format">
                 <div class="math">
                     <b id="num-2">2</b>
                 </div>
-                <div class="strip" id="bar-2">
-                    
+                <div class="strip">
+                    <div class="bar" id="bar-2"></div>
                 </div>
             </div>
             <div class="math_format">
                 <div class="math">
                     <b id="num-3">3</b>
                 </div>
-                <div class="strip" id="bar-3">
-                    
+                <div class="strip">
+                    <div class="bar" id="bar-3"></div>
                 </div>
             </div>
             <div class="math_format">
                 <div class="math">
                     <b id="num-4">4</b>    
                 </div>
-                <div class="strip" id="bar-4">
-                    
+                <div class="strip">
+                    <div class="bar" id="bar-4"></div>
                 </div>
             </div>
     </div>
     <div id="block2">
         <div class="name">
             <b>M   i n s t C a n v a   s !</b>
+            <canvas style="width: 28px; height: 28px; background-color: white;" id="hiddenCanvas" width="28"
+                height="28" display:none;></canvas>
         </div>
         <div class="img">
-            <canvas style="width: 28px; height: 28px; background-color: white; display: none;" id="hiddenCanvas" width="28"
-                height="28"></canvas>
             <canvas id="canvas" width="280" height="280"></canvas>
         </div>
         <div class="reset">
@@ -76,42 +74,42 @@
     <div id="block3">
         <div class="math_format">
             <div class="math">
-                <b>5</b>
+                <b id="num-5">5</b>
             </div>
             <div class="strip">
-                
+                <div class="bar" id="bar-5"></div>
             </div>
         </div>
         <div class="math_format">
             <div class="math">
-                <b>6</b>
+                <b id="num-6">6</b>
             </div>
             <div class="strip">
-                
+                <div class="bar" id="bar-6"></div>
             </div>
         </div>
         <div class="math_format">
             <div class="math">
-                <b>7</b>
+                <b id="num-7">7</b>
             </div>
             <div class="strip">
-                
+                <div class="bar" id="bar-7"></div> 
             </div>
         </div>
         <div class="math_format">
             <div class="math">
-                <b>8</b>
+                <b id="num-8">8</b>
             </div>
             <div class="strip">
-                
+                <div class="bar" id="bar-8"></div>
             </div>
         </div>
         <div class="math_format">
             <div class="math">
-                <b>9</b>
+                <b id="num-9">9</b>
             </div>
             <div class="strip">
-                
+                <div class="bar" id="bar-9"></div>
             </div>
         </div>
     </div>

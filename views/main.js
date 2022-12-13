@@ -2,12 +2,14 @@ const CANVAS_SIZE = 280;
 const CANVAS_SCALE = 0.1;
 const INFERENCE_SIZE = 28;
 
+let options = { willReadFrequently : true };
+
 const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext("2d", options);
 const rect = canvas.getBoundingClientRect();
 
 const hiddenCanvas = document.getElementById("hiddenCanvas");
-const hiddenCanvasCtx = hiddenCanvas.getContext("2d");
+const hiddenCanvasCtx = hiddenCanvas.getContext("2d", options);
 hiddenCanvasCtx.scale(CANVAS_SCALE, CANVAS_SCALE);
 
 
@@ -20,7 +22,7 @@ let y2 = 0;
 ctx.lineWidth = 5;
 ctx.lineCap = 'round'
 ctx.lineJoin = "round";
-
+ctx.strokeStyle = "#6d6875";
 const sess = new onnx.InferenceSession();
 const loadingModelPromise = sess.loadModel("onnx_model.onnx");
 
@@ -50,7 +52,23 @@ async function updatePredictions() {
     const maxPrediction = Math.max(...predictions);
     const predictLabel = predictions.findIndex((n) => n == maxPrediction);
     console.log(predictLabel);
+
+    for (let i = 0; i < predictions.length; i++) {
+        const bar = document.getElementById(`bar-${i}`);
+        const num = document.getElementById(`num-${i}`);
+        bar.style.width = `${predictions[i] * 90}px`;
+        if (predictLabel == i) {
+            bar.style.backgroundColor = "#b5838d";
+            num.style.fontWeight = "bold";
+        }
+        else {
+            bar.style.backgroundColor = "#b5838d";
+            num.style.fontWeight = "";
+        }
+    }
 }
+
+
 
 function getPos(x, y) {
     return {
@@ -99,3 +117,4 @@ loadingModelPromise.then(() => {
     canvas.addEventListener("mousemove", touchMove);
     canvas.addEventListener("mouseup", touchEnd);
 });
+
