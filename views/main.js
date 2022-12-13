@@ -17,7 +17,7 @@ let y1 = 0;
 let x2 = 0;
 let y2 = 0;
 
-ctx.lineWidth = 15;
+ctx.lineWidth = 5;
 ctx.lineCap = 'round'
 ctx.lineJoin = "round";
 

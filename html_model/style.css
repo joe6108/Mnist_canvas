@@ -41,6 +41,20 @@ body {
     margin-top: 15px;
     margin-right: auto;
 }
+.math{
+    background-color: rgb(192, 181, 64);
+    height: 80px;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.strip{
+    background-color: rgb(129, 44, 122);
+    height: 20px;
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .name{
     background-color: rgb(11, 50, 245);
     height: 50px;
