@@ -41,3 +41,11 @@ for epoch in range(5):
         loss = criterion(output, target)
         loss.backward()
         optimizer.step()
+
+# 評估模型
+model.eval()
+with torch.no_grad():
+    correct = 0
+    total = 0
+    for data, target in test_loader:
+        output = model(data)
