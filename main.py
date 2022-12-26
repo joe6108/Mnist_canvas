@@ -49,3 +49,9 @@ with torch.no_grad():
     total = 0
     for data, target in test_loader:
         output = model(data)
+
+# 轉換模型到onnx格式
+model.eval()
+dummy_input = torch.zeros((1, 1, 28, 28))
+torch.onnx.export(model, dummy_input,
+                  'onnx_model.onnx', verbose=True)
