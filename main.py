@@ -28,3 +28,16 @@ class RNN(nn.Module):
 
 # 建立模型實例
 model = RNN()
+
+# 定義損失函數和優化器
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01)
+
+# 訓練模型
+for epoch in range(5):
+    for data, target in train_loader:
+        optimizer.zero_grad()
+        output = model(data)
+        loss = criterion(output, target)
+        loss.backward()
+        optimizer.step()
