@@ -13,3 +13,18 @@ test_dataset = datasets.MNIST(root='.', train=False, transform=transform, downlo
 # 建立數據加載器
 train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=64, shuffle=True)
 test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=64, shuffle=False)
+
+# 定義模型
+class RNN(nn.Module):
+    def __init__(self):
+        super(RNN, self).__init__()
+        self.rnn = nn.RNN(input_size=28, hidden_size=128, num_layers=1, batch_first=True)
+        self.fc = nn.Linear(128, 10)
+
+    def forward(self, x):
+        x, _ = self.rnn(x)
+        x = self.fc(x[:, -1, :])
+        return x
+
+# 建立模型實例
+model = RNN()
