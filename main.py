@@ -1,5 +1,6 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 
@@ -32,14 +33,14 @@ class CNN(nn.Module):
         return x
 
 # 建立模型實例
-model = Net()
+model = CNN()
 
 # 定義損失函數和優化器
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(model.parameters(), lr=0.01)
 
 # 訓練模型
-for epoch in range(5):
+for epoch in range(20):
     for data, target in train_loader:
         optimizer.zero_grad()
         output = model(data)
