@@ -14,7 +14,15 @@
     <script defer src="views/main.js"></script>
 </head>
 
+
 <body>
+    <div class="lds-ring" id="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
     <div id="block_null"></div>
     <div id="block1">   
             <div class="math_format">
@@ -68,7 +76,7 @@
             <canvas id="canvas" width="280" height="280"></canvas>
         </div>
         <div class="reset">
-            <b>R e s e t!</b>
+            <button type="button" class="btn btn-clear" id="clear">Clear</button>
         </div>
     </div>
     <div id="block3">

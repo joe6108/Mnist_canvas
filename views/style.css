@@ -120,3 +120,94 @@ body {
     border-radius: 35px;
 }
 
+.btn-clear {
+    font-size: 40px;
+    color:#6d6875;
+    all: unset;
+}
+
+.btn-clear:hover,
+.btn-clear:focus,
+.btn-clear:active,
+.btn-clear.active,
+.open .dropdown-toggle.btn-clear {
+    color: #FFFFFF;
+    background-color: #b5838d;
+    border-color: #130269;
+}
+
+.btn-clear:active,
+.btn-clear.active,
+.open .dropdown-toggle.btn-clear {
+    background-image: none;
+}
+
+.btn-clear.disabled,
+.btn-clear[disabled],
+fieldset[disabled] .btn-clear,
+.btn-clear.disabled:hover,
+.btn-clear[disabled]:hover,
+fieldset[disabled] .btn-clear:hover,
+.btn-clear.disabled:focus,
+.btn-clear[disabled]:focus,
+fieldset[disabled] .btn-clear:focus,
+.btn-clear.disabled:active,
+.btn-clear[disabled]:active,
+fieldset[disabled] .btn-clear:active,
+.btn-clear.disabled.active,
+.btn-clear[disabled].active,
+fieldset[disabled] .btn-clear.active {
+    background-color: #6F38C5;
+    border-color: #130269;
+}
+
+.btn-clear .badge {
+    color: #6F38C5;
+    background-color: #FFFFFF;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(211, 211, 211, 0.75);
+    z-index: 999;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: calc(50vh - 32px);
+    left: calc(50vw - 32px);
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #6F38C5;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #6F38C5 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
