@@ -119,3 +119,8 @@ for epoch in range(20):
         # Put validate function here.
 
 torch.save(model.state_dict(), "model.pt")
+
+model.eval()
+dummy_input = torch.zeros((1, 1, 28, 28))
+torch.onnx.export(model, dummy_input,
+                  'onnx_model.onnx', verbose=True)
