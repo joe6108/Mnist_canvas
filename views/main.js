@@ -24,7 +24,7 @@ ctx.lineCap = 'round'
 ctx.lineJoin = "round";
 ctx.strokeStyle = "#6d6875";
 const sess = new onnx.InferenceSession();
-const loadingModelPromise = sess.loadModel("onnx_model.onnx");
+const loadingModelPromise = sess.loadModel("mnist/onnx_model.onnx");
 
 async function updatePredictions() {
     hiddenCanvasCtx.drawImage(canvas, 0, 0);
