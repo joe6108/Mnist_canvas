@@ -17,6 +17,5 @@ conda install pytorch==1.8.0 torchvision==0.9.0 cpuonly -c pytorch
 ```
 
 ## Training & Convert
-```
-python main1.py
-```
+1. click on `main1.py`
+2. ckick on `Run Python File`
