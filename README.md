@@ -8,3 +8,6 @@
 ## 使用方法
 1. terminal enter `npx serve`
 
+## 訓練
+1. See the `README.md` inside `mnist` folder.
+
